@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
+//import {Route, Switch, withRouter, Redirect} from 'react-router-dom';
+import { Router }from 'react-router';
 import 'font-awesome/css/font-awesome.css'
 import styles from '../../styles.module.css';
 
-class App extends Component {
+class App extends React.Component {
+
+    content () {
+        return ( <Router 
+                    routes={this.props.routes}
+                    history={this.props.history} />)
+    }
+
+    
     render() {
+
+
         return (
-            <div className={styles.wrapper}>
-                <i className="fa fa-star"></i>
-               <h1 >Environment: {__NODE_ENV__}</h1>
+            <div>
+                {this.content()}
             </div>
         );
     }
