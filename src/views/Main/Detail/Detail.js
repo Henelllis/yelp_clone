@@ -4,55 +4,55 @@ import styles from './styles.module.css'
 
 export class Detail extends Component {
 
-    constructor(props, context) {
+    // constructor(props, context) {
         
-        console.log('CONSTRUCTORRRR')
-        alert('CONSTRUCTORRRR')
-        super(props, context)
+    //     console.log('CONSTRUCTORRRR')
+    //     alert('CONSTRUCTORRRR')
+    //     super(props, context)
     
-        this.state = {
-          loading: true,
-          place: {},
-          location: {}
-        }
-      }
+    //     this.state = {
+    //       loading: true,
+    //       place: {},
+    //       location: {}
+    //     }
+    //   }
     
   
-    componentDidMount() {
-        console.log('COMPNENT DID MOUNT IN DETAIL')
-        if(this.props.map) {
-            this.getDetails(this.props.map);
-        }
-    }
+    // componentDidMount() {
+    //     console.log('COMPNENT DID MOUNT IN DETAIL')
+    //     if(this.props.map) {
+    //         this.getDetails(this.props.map);
+    //     }
+    // }
 
-    componentDidUpdate(prevProps) {
-        if(this.props.map &&
-            (prevProps.map !== this.props.map ||
-            prevProps.params.placeId !== this.props.params.placeId)){
-                this.getDetails(this.props.map);
-            }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if(this.props.map &&
+    //         (prevProps.map !== this.props.map ||
+    //         prevProps.params.placeId !== this.props.params.placeId)){
+    //             this.getDetails(this.props.map);
+    //         }
+    // }
 
-    getDetails(map) {
+    // getDetails(map) {
 
-        const {google, params} = this.props;
-        const {placeId} = params;
+    //     const {google, params} = this.props;
+    //     const {placeId} = params;
 
-        this.setState({loading: true}, ()=> {
-            getDetails(google, map, placeId)
-                .then( place => {
-                    const {location} = place.geometry;
-                    const loc = {
-                        lat: location.lat(),
-                        lng: location.lng()
-                    }
+    //     this.setState({loading: true}, ()=> {
+    //         getDetails(google, map, placeId)
+    //             .then( place => {
+    //                 const {location} = place.geometry;
+    //                 const loc = {
+    //                     lat: location.lat(),
+    //                     lng: location.lng()
+    //                 }
 
-                    this.setState({
-                        place, location: loc, loading: false
-                    })
-                })
-        })
-    }
+    //                 this.setState({
+    //                     place, location: loc, loading: false
+    //                 })
+    //             })
+    //     })
+    // }
 
   render() {
 

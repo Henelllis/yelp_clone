@@ -15,7 +15,8 @@ export class Container extends Component {
             pagination: null
     }
 
-    onMarkerClick = (item) => {
+    onMarkerClick(item){
+        console.log('PUSHINGMY BUTTONS')
         const {place} = item;
         const {push} = this.context.router;
         push(`/map/detail/${place.place_id}`) 
@@ -78,5 +79,5 @@ Container.contextTypes = {
   }
 
 export default GoogleApiWrapper({
-    apiKey: "AIzaSyAZQr8185VhvD3tb6bD-DiI1rEiBfGVvdk"
+    apiKey: "AIzaSyCs60P_rnH6jbLvtsd0EoJKg0tMFNAW_Ms"
 })(Container);
