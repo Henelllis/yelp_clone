@@ -9,9 +9,7 @@ export class Rating extends React.Component {
     // const style = {
         
     // }
-    console.log(this.props.children);
      const styleWidth = (this.props.children * 100) + '%'
-     console.log('DIS IS THE STYLA ' + styleWidth);
     return (
         <div className={styles.sprite}>
             <div className={styles.top} style={{width: styleWidth}}>

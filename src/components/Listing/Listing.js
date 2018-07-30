@@ -11,7 +11,6 @@ export class Listing extends Component {
       {this.props.places.map(place => {
         return (
           <Item place={place}
-                onClick={this.props.onClick}
                 key={place.id} />
         )
       })}
